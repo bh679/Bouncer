@@ -3,11 +3,764 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
-  <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <NewExtensions>
+    <extension index="0">extensions\Instance Nearest Extended</extension>
+    <extension index="1">extensions\Draw text extended</extension>
+  </NewExtensions>
+  <sounds name="sound">
+    <sounds name="background">
+      <sound>sound\snd_stage15</sound>
+      <sound>sound\snd_stage14_holograms</sound>
+      <sound>sound\snd_stage13</sound>
+      <sound>sound\snd_stage12_stormbig</sound>
+      <sound>sound\snd_stage17_random</sound>
+      <sound>sound\snd_stage11_windy</sound>
+      <sound>sound\snd_stage9_magnetic</sound>
+      <sound>sound\snd_stage10_storm</sound>
+      <sound>sound\snd_stage7_wind</sound>
+      <sound>sound\snd_stage8_swamp</sound>
+      <sound>sound\snd_stage6_ocean</sound>
+      <sound>sound\snd_stage5_mill</sound>
+      <sound>sound\snd_stage4_lastjungle</sound>
+      <sound>sound\snd_stage3_house</sound>
+      <sound>sound\snd_stage2_jungle</sound>
+      <sound>sound\snd_stage1_peace</sound>
+    </sounds>
+    <sounds name="soundsfx">
+      <sound>sound\fx_bounce</sound>
+      <sounds name="metal">
+        <sound>sound\fx_metal1</sound>
+        <sound>sound\fx_metal2</sound>
+      </sounds>
+      <sounds name="boing">
+        <sound>sound\fx_boing2</sound>
+        <sound>sound\fx_boing1</sound>
+      </sounds>
+      <sounds name="gravel">
+        <sound>sound\fx_gravel1</sound>
+        <sound>sound\fx_gravel2</sound>
+        <sound>sound\fx_gravel4</sound>
+        <sound>sound\fx_gravel3</sound>
+      </sounds>
+      <sounds name="Wood">
+        <sound>sound\fx_wood4</sound>
+        <sound>sound\fx_wood3</sound>
+        <sound>sound\fx_wood2</sound>
+        <sound>sound\fx_wood1</sound>
+      </sounds>
+      <sounds name="sand">
+        <sound>sound\fx_sand1</sound>
+        <sound>sound\fx_sand2</sound>
+        <sound>sound\fx_sand3</sound>
+        <sound>sound\fx_sand4</sound>
+      </sounds>
+      <sounds name="Rock">
+        <sound>sound\fx_stone1</sound>
+        <sound>sound\fx_stone2</sound>
+        <sound>sound\fx_stone3</sound>
+        <sound>sound\fx_stone4</sound>
+      </sounds>
+      <sounds name="Glass">
+        <sound>sound\fx_shatter1</sound>
+        <sound>sound\fx_shatter2</sound>
+        <sound>sound\fx_shatter3</sound>
+      </sounds>
+      <sound>sound\fx_bounce3</sound>
+      <sounds name="lava">
+        <sound>sound\fx_lava2</sound>
+        <sound>sound\fx_lava1</sound>
+        <sound>sound\fx_fire</sound>
+        <sound>sound\fx_sizzle</sound>
+      </sounds>
+      <sound>sound\fx_bounce2</sound>
+      <sound>sound\fx_bounce_sand</sound>
+    </sounds>
+    <sounds name="Voices">
+      <sounds name="Brennan">
+        <sound>sound\bh_finish1</sound>
+        <sound>sound\bh_finish2</sound>
+        <sound>sound\bh_wee1</sound>
+        <sound>sound\bh_oach2</sound>
+        <sound>sound\bh_oach1</sound>
+        <sound>sound\bh_ooh2</sound>
+        <sound>sound\bh_ooh1</sound>
+        <sound>sound\bh_ah2</sound>
+        <sound>sound\bh_ah1</sound>
+      </sounds>
+      <sounds name="mum">
+        <sound>sound\mm_finish6</sound>
+        <sound>sound\mm_finish5</sound>
+        <sound>sound\mm_finish4</sound>
+        <sound>sound\mm_finish3</sound>
+        <sound>sound\mm_finish2</sound>
+        <sound>sound\mm_finish1</sound>
+        <sound>sound\mm_ah3</sound>
+        <sound>sound\mm_ah2</sound>
+        <sound>sound\mm_ah1</sound>
+        <sound>sound\mm_ooh3</sound>
+        <sound>sound\mm_ooh2</sound>
+        <sound>sound\mm_ooh1</sound>
+        <sound>sound\mm_oach3</sound>
+        <sound>sound\mm_oach2</sound>
+        <sound>sound\mm_oach1</sound>
+        <sound>sound\mm_wee2</sound>
+        <sound>sound\mm_wee1</sound>
+      </sounds>
+      <sounds name="Aidan">
+        <sound>sound\ah_finish3</sound>
+        <sound>sound\ah_finish2</sound>
+        <sound>sound\ah_finish1</sound>
+        <sound>sound\ah_ooh2</sound>
+        <sound>sound\ah_ooh1</sound>
+        <sound>sound\ah_wee3</sound>
+        <sound>sound\ah_wee2</sound>
+        <sound>sound\ah_wee1</sound>
+        <sound>sound\ah_ah1</sound>
+        <sound>sound\ah_ah2</sound>
+        <sound>sound\ah_oach1</sound>
+      </sounds>
+      <sounds name="Alicia">
+        <sound>sound\at_oach2</sound>
+        <sound>sound\at_oach1</sound>
+        <sound>sound\at_ah2</sound>
+        <sound>sound\at_ah1</sound>
+        <sound>sound\at_wee2</sound>
+        <sound>sound\at_wee3</sound>
+        <sound>sound\at_wee1</sound>
+      </sounds>
+    </sounds>
+  </sounds>
+  <sprites name="sprites">
+    <sprites name="obj's">
+      <sprites name="blocks">
+        <sprites name="old">
+          <sprite>sprites\spr_wall</sprite>
+          <sprite>sprites\spr_slow</sprite>
+          <sprite>sprites\spr_larva</sprite>
+          <sprite>sprites\spr_creatold</sprite>
+          <sprite>sprites\spr_tnt</sprite>
+          <sprite>sprites\spr_magnetic</sprite>
+          <sprite>sprites\spr_magnet2</sprite>
+          <sprite>sprites\spr_movewall</sprite>
+          <sprite>sprites\spr_ice</sprite>
+          <sprite>sprites\spr_fire_box</sprite>
+          <sprite>sprites\spr_wall_fake</sprite>
+          <sprite>sprites\spr_creat_fake</sprite>
+          <sprite>sprites\spr_glass_fake</sprite>
+          <sprite>sprites\spr_slow_fake</sprite>
+          <sprite>sprites\spr_glass_old</sprite>
+          <sprite>sprites\spr_inivisible</sprite>
+          <sprite>sprites\spr_inivisible2</sprite>
+          <sprite>sprites\sprite125</sprite>
+        </sprites>
+        <sprites name="New">
+          <sprites name="unused">
+            <sprite>sprites\spr_leaves_solid</sprite>
+            <sprite>sprites\spr_leaves</sprite>
+          </sprites>
+          <sprites name="Extras">
+            <sprite>sprites\spr_grass</sprite>
+          </sprites>
+          <sprite>sprites\spr_lava</sprite>
+          <sprite>sprites\spr_lava_top</sprite>
+          <sprite>sprites\spr_tramp</sprite>
+          <sprite>sprites\spr_sheild</sprite>
+          <sprite>sprites\spr_sheild2</sprite>
+          <sprite>sprites\spr_rubber</sprite>
+          <sprite>sprites\spr_glass_shards</sprite>
+          <sprite>sprites\spr_creat</sprite>
+          <sprite>sprites\spr_magnet_north</sprite>
+          <sprite>sprites\spr_magnet_south</sprite>
+          <sprite>sprites\spr_rock</sprite>
+          <sprite>sprites\spr_glass</sprite>
+          <sprite>sprites\spr_dirt</sprite>
+          <sprite>sprites\spr_sand</sprite>
+          <sprite>sprites\spr_wood</sprite>
+          <sprite>sprites\spr_lava_top_old</sprite>
+        </sprites>
+        <sprites name="Stages">
+          <sprite>sprites\spr_levelSide</sprite>
+          <sprites name="1">
+            <sprite>sprites\spr_stage1</sprite>
+            <sprite>sprites\spr_bg_peace</sprite>
+          </sprites>
+          <sprite>sprites\spr_levelCorner</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="other">
+        <sprites name="Old">
+          <sprites name="other">
+            <sprite>sprites\spr_fan_wind</sprite>
+            <sprite>sprites\spr_boost</sprite>
+            <sprite>sprites\spr_ash</sprite>
+            <sprite>sprites\spr_fan</sprite>
+            <sprite>sprites\spr_fire</sprite>
+            <sprite>sprites\spr_wall2</sprite>
+            <sprite>sprites\spr_wall4</sprite>
+            <sprite>sprites\spr_jump</sprite>
+            <sprite>sprites\spr_sand_top</sprite>
+            <sprite>sprites\spr_creat_break</sprite>
+            <sprite>sprites\spr_water_top2</sprite>
+            <sprite>sprites\spr_wall5</sprite>
+            <sprite>sprites\spr_water</sprite>
+            <sprite>sprites\spr_spike</sprite>
+            <sprite>sprites\spr_bounce_hor</sprite>
+            <sprite>sprites\spr_door</sprite>
+            <sprite>sprites\spr_ballwall</sprite>
+            <sprite>sprites\spr_door2</sprite>
+            <sprite>sprites\spr_wall3</sprite>
+            <sprite>sprites\spr_wind</sprite>
+            <sprite>sprites\spr_buy_glass</sprite>
+            <sprite>sprites\spr_glass_shatter</sprite>
+            <sprite>sprites\spr_bounce_vert</sprite>
+          </sprites>
+        </sprites>
+        <sprite>sprites\spr_cog</sprite>
+        <sprite>sprites\spr_cog_right</sprite>
+        <sprite>sprites\spr_vine</sprite>
+        <sprite>sprites\spr_weed</sprite>
+        <sprite>sprites\sprite_hotair</sprite>
+        <sprite>sprites\spr_hotair</sprite>
+        <sprite>sprites\spr_lava_fountain</sprite>
+        <sprite>sprites\spr_lavatop_collision</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="buttons/tags">
+      <sprites name="custom">
+        <sprite>sprites\spr_change_sides</sprite>
+        <sprite>sprites\spr_save</sprite>
+        <sprite>sprites\spr_show</sprite>
+      </sprites>
+      <sprite>sprites\sprite97</sprite>
+      <sprite>sprites\spr_icon</sprite>
+    </sprites>
+    <sprites name="Display">
+      <sprite>sprites\spr_regen</sprite>
+      <sprite>sprites\spr_power_arrow</sprite>
+    </sprites>
+    <sprites name="background">
+      <sprite>sprites\spr_windmill</sprite>
+      <sprite>sprites\spr_leaf</sprite>
+      <sprite>sprites\spr_leaf2</sprite>
+      <sprite>sprites\spr_leaf3</sprite>
+      <sprite>sprites\spr_sun</sprite>
+      <sprite>sprites\spr_sunbeam</sprite>
+      <sprite>sprites\spr_cloud</sprite>
+    </sprites>
+    <sprites name="sprites">
+      <sprite>sprites\spr_pixel</sprite>
+    </sprites>
+    <sprites name="Ball">
+      <sprite>sprites\spr_ball_spin</sprite>
+      <sprite>sprites\spr_ball</sprite>
+      <sprite>sprites\spr_bigball</sprite>
+      <sprite>sprites\spr_ball_spin2</sprite>
+      <sprite>sprites\spr_ball_speak</sprite>
+      <sprite>sprites\spr_ball_board</sprite>
+      <sprite>sprites\spr_ball_explode</sprite>
+      <sprite>sprites\spr_ball_waiting</sprite>
+      <sprite>sprites\spr_ball_read</sprite>
+      <sprite>sprites\sprite169</sprite>
+    </sprites>
+    <sprite>sprites\spr_lavaPart</sprite>
+    <sprite>sprites\spr_explosion</sprite>
+    <sprite>sprites\spr_gradient</sprite>
+    <sprite>sprites\spr_last_click</sprite>
+    <sprite>sprites\spr_ball_burn</sprite>
+    <sprite>sprites\spr_ball_burn_old</sprite>
+    <sprite>sprites\spr_start</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bg_menu</background>
+    <background>background\bg_nothing</background>
+    <background>background\tile_wood</background>
+    <background>background\click_to_contiune</background>
+    <background>background\bg_splash</background>
+    <background>background\bg_overgrown</background>
+    <backgrounds name="beginning">
+      <background>background\bg_peace</background>
+      <background>background\bg_mountain</background>
+      <background>background\bg_mountain2</background>
+      <background>background\bg_mountain3</background>
+      <background>background\bg_mountain4</background>
+      <background>background\bg_mountain5</background>
+      <background>background\bg_windmill</background>
+      <background>background\bg_trees1</background>
+      <background>background\bg_trees2</background>
+      <background>background\bg_trees3</background>
+      <background>background\bg_trees4</background>
+      <background>background\bg_trees5</background>
+      <background>background\bg_trees6</background>
+      <background>background\bg_fence1</background>
+      <background>background\bg_fence2</background>
+      <background>background\bg_square_house</background>
+      <background>background\bg_improvment</background>
+    </backgrounds>
+    <background>background\bg_lava</background>
+    <backgrounds name="industrial">
+      <background>background\bg_steelworks</background>
+      <background>background\bg_steelworks_forground</background>
+      <background>background\bg_steelworks_forground2</background>
+      <background>background\bg_steelworks_forground3</background>
+    </backgrounds>
+    <background>background\bg_water_dark</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Contants">
+      <scripts name="tips">
+        <script>scripts\tip_was_used_last.gml</script>
+        <script>scripts\set_tips_tutorial.gml</script>
+        <script>scripts\update_last_tip.gml</script>
+        <script>scripts\new_tip.gml</script>
+        <script>scripts\set_tips.gml</script>
+        <script>scripts\tips_help.gml</script>
+        <script>scripts\set_tips_windows.gml</script>
+        <script>scripts\set_tips_mac.gml</script>
+        <script>scripts\set_tips_iOS.gml</script>
+        <script>scripts\draw_tip.gml</script>
+        <script>scripts\tips_quotes.gml</script>
+        <script>scripts\tips_credits.gml</script>
+        <script>scripts\tips_silly.gml</script>
+        <script>scripts\tips_jokes.gml</script>
+        <script>scripts\tips_meinfo.gml</script>
+        <scripts name="old">
+          <script>scripts\tiupsoriginal.gml</script>
+          <script>scripts\draw_tips.gml</script>
+        </scripts>
+      </scripts>
+      <script>scripts\set_keyconstants.gml</script>
+    </scripts>
+    <scripts name="score">
+      <script>scripts\SaveScore.gml</script>
+    </scripts>
+    <scripts name="Menu">
+      <script>scripts\openStage.gml</script>
+      <script>scripts\menuButtonAction.gml</script>
+      <script>scripts\draw_button_loadcustom.gml</script>
+    </scripts>
+    <scripts name="obj_cloud">
+      <script>scripts\reset_cloud.gml</script>
+    </scripts>
+    <scripts name="Ball">
+      <scripts name="Collision">
+        <script>scripts\ChangeImage.gml</script>
+        <script>scripts\deadChangeImage.gml</script>
+        <script>scripts\BounceSound.gml</script>
+        <script>scripts\CollisionBlockType.gml</script>
+        <script>scripts\StretchBallCollision.gml</script>
+        <script>scripts\collision_wall.gml</script>
+      </scripts>
+      <script>scripts\calabrateTilt.gml</script>
+      <script>scripts\customplay.gml</script>
+      <script>scripts\ball_play_voice_hurt.gml</script>
+      <script>scripts\play_voice.gml</script>
+      <script>scripts\sound_play_random.gml</script>
+      <script>scripts\check_blocks.gml</script>
+    </scripts>
+    <scripts name="Levels">
+      <scripts name="level files">
+        <script>scripts\read_level.gml</script>
+        <script>scripts\save_levels.gml</script>
+        <script>scripts\new_level.gml</script>
+        <script>scripts\new_level_edited.gml</script>
+      </scripts>
+      <script>scripts\UnlockNewStaged.gml</script>
+      <script>scripts\CalcAvgLevelScore.gml</script>
+      <script>scripts\firstLevel.gml</script>
+      <script>scripts\loadrecords.gml</script>
+      <script>scripts\saverecords.gml</script>
+      <script>scripts\nextroom.gml</script>
+      <script>scripts\RoomIsLevel.gml</script>
+      <script>scripts\RoomIsStage.gml</script>
+      <script>scripts\room_start.gml</script>
+      <script>scripts\image_level.gml</script>
+      <script>scripts\GetStage.gml</script>
+      <script>scripts\reset_var.gml</script>
+      <scripts name="custom_level">
+        <scripts name="Save">
+          <script>scripts\SaveLevel.gml</script>
+          <script>scripts\GetArray.gml</script>
+          <script>scripts\SaveBlock.gml</script>
+          <script>scripts\SaveLevelArray.gml</script>
+          <script>scripts\restart_custom.gml</script>
+        </scripts>
+        <scripts name="Load">
+          <script>scripts\GetLevelName.gml</script>
+          <script>scripts\LoadCustom.gml</script>
+        </scripts>
+        <script>scripts\reset_ball.gml</script>
+        <script>scripts\Block_button.gml</script>
+      </scripts>
+      <scripts name="RandomLevels">
+        <script>scripts\AddHorzRows.gml</script>
+        <script>scripts\DirectionToIntersection.gml</script>
+        <script>scripts\AddVertRows.gml</script>
+        <script>scripts\SandLevel.gml</script>
+        <script>scripts\ChangeROWBLOCK.gml</script>
+        <script>scripts\TrampLevel.gml</script>
+        <script>scripts\AddLining.gml</script>
+        <script>scripts\AddLiningAngle.gml</script>
+        <script>scripts\AddTramp.gml</script>
+        <script>scripts\AddClumps.gml</script>
+        <script>scripts\CheckHRow.gml</script>
+        <script>scripts\CheckVRow.gml</script>
+        <script>scripts\GenExit.gml</script>
+      </scripts>
+      <script>scripts\unlock_level.gml</script>
+      <script>scripts\LevelsBeforeStage.gml</script>
+    </scripts>
+    <scripts name="Display scripts">
+      <script>scripts\draw_sprite_tiled_custom.gml</script>
+      <script>scripts\MouseInBox.gml</script>
+      <script>scripts\draw_text_shadow.gml</script>
+      <script>scripts\draw_text_shadow_transformed.gml</script>
+    </scripts>
+    <scripts name="Tutorial">
+      <script>scripts\draw_tutorial_mac.gml</script>
+      <script>scripts\draw_tutorial_iOS.gml</script>
+      <script>scripts\draw_tutorial_windows.gml</script>
+      <script>scripts\draw_tutorial_html5.gml</script>
+      <script>scripts\draw_tutorial.gml</script>
+    </scripts>
+    <scripts name="Block">
+      <script>scripts\block_merge.gml</script>
+    </scripts>
+    <script>scripts\bg_music.gml</script>
+    <scripts name="UI">
+      <script>scripts\draw_score_old.gml</script>
+      <script>scripts\draw_score.gml</script>
+    </scripts>
+    <script>scripts\OnOff.gml</script>
+    <script>scripts\draw_time.gml</script>
+    <scripts name="generic">
+      <script>scripts\swapTrueFalse.gml</script>
+    </scripts>
+    <script>scripts\SwapLevel.gml</script>
+    <script>scripts\BackgroundBox.gml</script>
+    <script>scripts\script48.gml</script>
+    <script>scripts\changeGraphics.gml</script>
+    <script>scripts\mouse_xroom.gml</script>
+    <script>scripts\mouse_yroom.gml</script>
+    <scripts name="particalSystem">
+      <script>scripts\particalSystem.gml</script>
+    </scripts>
+    <script>scripts\GetVineLength.gml</script>
+    <script>scripts\GetAirHeight.gml</script>
+    <script>scripts\StringToInt.gml</script>
+    <script>scripts\delete_custom_levels.gml</script>
+    <scripts name="Game Start">
+      <script>scripts\setPlatform.gml</script>
+      <script>scripts\initilise_game.gml</script>
+      <script>scripts\set_game_value.gml</script>
+    </scripts>
+    <script>scripts\refresh_list.gml</script>
+    <script>scripts\restart_edit.gml</script>
+    <script>scripts\scr_new_stage.gml</script>
+    <script>scripts\calculate_total_score.gml</script>
+    <script>scripts\go_to_menu.gml</script>
+    <script>scripts\script30.gml</script>
+    <script>scripts\script43.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\Forte_options</font>
+    <font>fonts\Forte_Splash</font>
+    <font>fonts\Forte_24</font>
+    <fonts name="Highscore">
+      <font>fonts\fnt_highscoreBig</font>
+      <font>fonts\fnt_highscore</font>
+      <font>fonts\fnt_highscoreSmall</font>
+    </fonts>
+    <font>fonts\Tahoma_R_8</font>
+    <font>fonts\Tahoma_R_8_2</font>
+    <font>fonts\Tahoma_R_14</font>
+    <font>fonts\fontTipSmall</font>
+    <font>fonts\fontTipBig</font>
+    <font>fonts\fontBall</font>
+    <font>fonts\MenuFont</font>
+    <font>fonts\MenuFontSmall</font>
+    <font>fonts\MenuFontB</font>
+    <font>fonts\MenuFontSmallB</font>
+    <fonts name="Tutorial">
+      <font>fonts\TutFontBig</font>
+      <font>fonts\TutFontHuge</font>
+      <font>fonts\TutFontSmall</font>
+    </fonts>
+  </fonts>
+  <objects name="objects">
+    <objects name="Blocks">
+      <objects name="block parts">
+        <object>objects\obj_glass_shards</object>
+        <object>objects\obj_leaves</object>
+        <object>objects\obj_solid_leaves</object>
+        <object>objects\obj_creat_dead</object>
+      </objects>
+      <object>objects\obj_dirt</object>
+      <object>objects\obj_sheild</object>
+      <object>objects\obj_sheild_clear</object>
+      <object>objects\obj_rock</object>
+      <object>objects\obj_wood</object>
+      <object>objects\obj_lava</object>
+      <object>objects\obj_sand</object>
+      <object>objects\obj_creat</object>
+      <object>objects\obj_cog_right</object>
+      <object>objects\obj_cog</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_tramp</object>
+      <object>objects\obj_rubber</object>
+      <object>objects\obj_magnet_north</object>
+      <object>objects\obj_magnet_south</object>
+      <object>objects\obj_glass</object>
+      <object>objects\obj_solid</object>
+    </objects>
+    <objects name="other">
+      <object>objects\obj_hotair</object>
+      <object>objects\obj_vine</object>
+      <object>objects\obj_lava_fountain</object>
+    </objects>
+    <object>objects\obj_cloud</object>
+    <object>objects\obj_newstage</object>
+    <object>objects\obj_newlevel</object>
+    <object>objects\obj_menu</object>
+    <object>objects\obj_new_level</object>
+    <object>objects\obj_custom</object>
+    <object>objects\obj_display</object>
+    <object>objects\obj_loadcustom</object>
+    <object>objects\obj_splash</object>
+    <objects name="iOS">
+      <object>objects\obj_iOSTransition</object>
+      <object>objects\obj_glow</object>
+    </objects>
+    <objects name="records">
+      <object>objects\_Stage</object>
+      <object>objects\Levels</object>
+    </objects>
+    <objects name="Tutorial">
+      <object>objects\tutorial</object>
+    </objects>
+    <object>objects\obj_ctrl</object>
+    <object>objects\obj_ballcollision</object>
+    <object>objects\object202</object>
+    <object>objects\wall_par</object>
+    <object>objects\custom_par</object>
+    <object>objects\obj_ball</object>
+    <object>objects\obj_deadball</object>
+  </objects>
+  <timelines name="timelines">
+    <timeline>timelines\timeline0</timeline>
+  </timelines>
+  <rooms name="rooms">
+    <rooms name="Menu">
+      <room>rooms\startroom</room>
+      <room>rooms\rm_splash</room>
+      <room>rooms\newstage0</room>
+    </rooms>
+    <rooms name="Harmony">
+      <rooms name="Tutorial">
+        <room>rooms\tut_1</room>
+        <room>rooms\tut_2</room>
+        <room>rooms\tut_3</room>
+      </rooms>
+      <room>rooms\room140</room>
+      <room>rooms\room349</room>
+      <room>rooms\room374</room>
+      <room>rooms\room347</room>
+      <room>rooms\room369</room>
+      <room>rooms\room370</room>
+      <room>rooms\room350</room>
+      <room>rooms\room372</room>
+      <room>rooms\room371</room>
+      <room>rooms\room345</room>
+      <room>rooms\room463</room>
+      <room>rooms\room376</room>
+      <room>rooms\room367</room>
+      <room>rooms\room358</room>
+      <room>rooms\room361</room>
+    </rooms>
+    <rooms name="Overgrown">
+      <room>rooms\newstage1</room>
+      <room>rooms\room375</room>
+      <room>rooms\room377</room>
+      <room>rooms\room142</room>
+      <room>rooms\room378</room>
+      <room>rooms\room379</room>
+      <room>rooms\room143</room>
+    </rooms>
+    <rooms name="construction">
+      <room>rooms\newstage2</room>
+      <room>rooms\room392</room>
+      <room>rooms\room398</room>
+      <room>rooms\room391</room>
+      <room>rooms\room431</room>
+      <room>rooms\room407</room>
+      <room>rooms\room400</room>
+      <room>rooms\room408</room>
+      <room>rooms\room429</room>
+    </rooms>
+    <rooms name="industrial">
+      <room>rooms\newstage3</room>
+      <room>rooms\room409</room>
+      <room>rooms\room414</room>
+      <room>rooms\room427</room>
+      <room>rooms\room418</room>
+      <room>rooms\room415</room>
+      <room>rooms\room417</room>
+    </rooms>
+    <rooms name="Improvement2">
+      <room>rooms\newstage4</room>
+      <room>rooms\room364</room>
+      <room>rooms\room365</room>
+      <room>rooms\room381</room>
+      <room>rooms\room397</room>
+      <room>rooms\room432</room>
+      <room>rooms\room433</room>
+      <room>rooms\room383</room>
+    </rooms>
+    <rooms name="technical">
+      <room>rooms\room451</room>
+      <room>rooms\room437</room>
+      <room>rooms\room438</room>
+      <room>rooms\room446</room>
+      <room>rooms\room445</room>
+      <room>rooms\room447</room>
+      <room>rooms\room444</room>
+      <room>rooms\room442</room>
+      <room>rooms\room443</room>
+      <room>rooms\room441</room>
+      <room>rooms\room448</room>
+      <room>rooms\room450</room>
+    </rooms>
+    <rooms name="tech2">
+      <room>rooms\room453</room>
+      <room>rooms\room460</room>
+      <room>rooms\room454</room>
+      <room>rooms\room457</room>
+      <room>rooms\room452</room>
+      <room>rooms\room456</room>
+      <room>rooms\room461</room>
+      <room>rooms\room462</room>
+      <room>rooms\room455</room>
+      <room>rooms\room459</room>
+    </rooms>
+    <rooms name="Sheilds">
+      <room>rooms\room464</room>
+      <room>rooms\room473</room>
+      <room>rooms\room467</room>
+      <room>rooms\room471</room>
+      <room>rooms\room474</room>
+      <room>rooms\room470</room>
+      <room>rooms\room472</room>
+      <room>rooms\room468</room>
+    </rooms>
+    <rooms name="later">
+      <room>rooms\room394</room>
+      <room>rooms\room393</room>
+      <room>rooms\room401</room>
+    </rooms>
+    <rooms name="no">
+      <room>rooms\room343</room>
+      <room>rooms\room342</room>
+      <room>rooms\room344</room>
+      <room>rooms\room341</room>
+      <room>rooms\room338</room>
+      <room>rooms\room373</room>
+      <room>rooms\room387</room>
+      <room>rooms\tut_4</room>
+      <room>rooms\room346</room>
+      <room>rooms\room354</room>
+      <room>rooms\room356</room>
+      <room>rooms\room355</room>
+      <room>rooms\room141</room>
+      <room>rooms\room362</room>
+      <room>rooms\room360</room>
+      <room>rooms\room380</room>
+      <room>rooms\room368</room>
+      <room>rooms\room385</room>
+      <room>rooms\room395</room>
+      <room>rooms\room396</room>
+      <room>rooms\room430</room>
+      <room>rooms\room413</room>
+      <room>rooms\room419</room>
+      <room>rooms\room416</room>
+      <room>rooms\room412</room>
+      <room>rooms\room428</room>
+      <room>rooms\room384</room>
+      <room>rooms\room435</room>
+      <room>rooms\room366</room>
+      <room>rooms\room434</room>
+      <room>rooms\room382</room>
+      <room>rooms\room440</room>
+      <room>rooms\room439</room>
+      <room>rooms\room449</room>
+      <room>rooms\room458</room>
+      <room>rooms\room469</room>
+      <room>rooms\room466</room>
+      <room>rooms\room475</room>
+      <room>rooms\room476</room>
+    </rooms>
+    <room>rooms\copy_mechanical</room>
+    <room>rooms\copy_technical</room>
+    <room>rooms\copy_improvement</room>
+    <room>rooms\copy_industrlia</room>
+    <room>rooms\copy</room>
+    <room>rooms\room144</room>
+    <room>rooms\room_customplay</room>
+    <room>rooms\rm_custom</room>
+    <room>rooms\room420</room>
+    <room>rooms\random_level</room>
+    <rooms name="stage_select">
+      <room>rooms\stage_select1</room>
+      <room>rooms\stage_select2</room>
+      <room>rooms\stage_select3</room>
+      <room>rooms\stage_select4</room>
+      <room>rooms\stage_select5</room>
+      <room>rooms\stage_select6</room>
+      <room>rooms\stage_select7</room>
+      <room>rooms\stage_select8</room>
+      <room>rooms\stage_select9</room>
+      <room>rooms\stage_selectCustom</room>
+    </rooms>
+  </rooms>
+  <constants number="38">
+    <constant name="STRDEBUGGIN">"Debugging"</constant>
+    <constant name="SEC">30</constant>
+    <constant name="STRPLATFORM">"Platform"</constant>
+    <constant name="Mac">"Mac OS X"</constant>
+    <constant name="Windows">"Windows"</constant>
+    <constant name="html5">"HTML5"</constant>
+    <constant name="Html5">"HTML5"</constant>
+    <constant name="HTML5">"HTML5"</constant>
+    <constant name="iOS">"iOS"</constant>
+    <constant name="c_ltblue">make_color_rgb(180,180,225)</constant>
+    <constant name="c_ltgreen">make_color_rgb(180,225,180)</constant>
+    <constant name="TIPSREPEATLIM">50</constant>
+    <constant name="STRVOICES">"Voices"</constant>
+    <constant name="STRMUTE">"Mute"</constant>
+    <constant name="STRFULLSCREEN">"Fullscreen (coming soon)"</constant>
+    <constant name="STRGRAPHICS">"Graphics"</constant>
+    <constant name="STRCUSTOM">"Custom Stage"</constant>
+    <constant name="STRSTAGE">"Stage"</constant>
+    <constant name="STRMENU">"Menu"</constant>
+    <constant name="STRMORE">"More"</constant>
+    <constant name="STRUPDATE">"Update"</constant>
+    <constant name="STRAUDIO">"Audio"</constant>
+    <constant name="STRVIDEO">"Video"</constant>
+    <constant name="STREXIT">"Exit"</constant>
+    <constant name="STRSTAGES">"Stages"</constant>
+    <constant name="STROPTIONS">"Options"</constant>
+    <constant name="STRPLAY">"Play!"</constant>
+    <constant name="BLOCKSIZE">16</constant>
+    <constant name="VOICES">4</constant>
+    <constant name="MENUROOM">newstage0</constant>
+    <constant name="c_pink">make_color_rgb(220,0,0)</constant>
+    <constant name="c_darkred">make_color_rgb(130,0,0)</constant>
+    <constant name="c_grassgreen">make_color_rgb(0,201,0)</constant>
+    <constant name="c_purple">make_color_rgb(21,138,234)</constant>
+    <constant name="c_yellowgreen">make_color_rgb(166,253,3)</constant>
+    <constant name="c_dkblue">make_color_rgb(0,0,129)</constant>
+    <constant name="c_brown">make_color_rgb(147,83,19)</constant>
+    <constant name="version">1.9</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

@@ -1,0 +1,11 @@
+ini_open('records.ini')
+    global.besttime = ini_read_real(string(Levels.roomindex),'time',-1)
+    global.bestscore = ini_read_real(string(Levels.roomindex),'score',-1)
+    global.bestbounces = ini_read_real(string(Levels.roomindex),'bounces',-1)
+    global.bestdis = ini_read_real(string(Levels.roomindex),'distance',-1)
+    global.bestx = ini_read_real(string(Levels.roomindex),'bestposx',-100)
+    global.besty = ini_read_real(string(Levels.roomindex),'bestposy',-100)
+    if global.previous_room != room
+        global.trys = ini_read_real(string(Levels.roomindex),'trys',0)
+    global.completes = ini_read_real(string(Levels.roomindex),'completes',0)
+ini_close()
