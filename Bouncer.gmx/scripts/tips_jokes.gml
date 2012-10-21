@@ -295,6 +295,7 @@ global.tips += 1
 global.tip[global.tips] = "I complimented my friend on their awesome mustache the other day, now she wont talk to me..."
 global.tips += 1
 
+tips_jokesFromSash();
 /*
 
 

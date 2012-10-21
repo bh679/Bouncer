@@ -139,7 +139,7 @@ optimise = true
             <string>//draw_sprite_ext(spr_sand,0,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 
 draw_sprite_tiled_custom(spr_sand,0,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha,true)
-if check = true and !(global.platform = iOS or global.platform = HTML5)
+if check = true and global.detail &gt;= GRAPHICMID//!(global.platform = iOS or global.platform = HTML5)
 {
     if left = false 
       draw_sprite(spr_wood,1,x,y)

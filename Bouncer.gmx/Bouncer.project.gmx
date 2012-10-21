@@ -308,22 +308,25 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Contants">
-      <scripts name="tips">
+      <scripts name="tips functions">
         <script>scripts\tip_was_used_last.gml</script>
         <script>scripts\set_tips_tutorial.gml</script>
         <script>scripts\update_last_tip.gml</script>
         <script>scripts\new_tip.gml</script>
         <script>scripts\set_tips.gml</script>
-        <script>scripts\tips_help.gml</script>
-        <script>scripts\set_tips_windows.gml</script>
-        <script>scripts\set_tips_mac.gml</script>
-        <script>scripts\set_tips_iOS.gml</script>
         <script>scripts\draw_tip.gml</script>
-        <script>scripts\tips_quotes.gml</script>
-        <script>scripts\tips_credits.gml</script>
-        <script>scripts\tips_silly.gml</script>
-        <script>scripts\tips_jokes.gml</script>
-        <script>scripts\tips_meinfo.gml</script>
+        <scripts name="tips">
+          <script>scripts\tips_help.gml</script>
+          <script>scripts\set_tips_windows.gml</script>
+          <script>scripts\set_tips_mac.gml</script>
+          <script>scripts\set_tips_iOS.gml</script>
+          <script>scripts\tips_quotes.gml</script>
+          <script>scripts\tips_credits.gml</script>
+          <script>scripts\tips_silly.gml</script>
+          <script>scripts\tips_jokes.gml</script>
+          <script>scripts\tips_jokesFromSash.gml</script>
+          <script>scripts\tips_meinfo.gml</script>
+        </scripts>
         <scripts name="old">
           <script>scripts\tiupsoriginal.gml</script>
           <script>scripts\draw_tips.gml</script>
@@ -450,6 +453,7 @@
     <script>scripts\StringToInt.gml</script>
     <script>scripts\delete_custom_levels.gml</script>
     <scripts name="Game Start">
+      <script>scripts\scale_the_universe.gml</script>
       <script>scripts\setPlatform.gml</script>
       <script>scripts\initilise_game.gml</script>
       <script>scripts\set_game_value.gml</script>
@@ -548,6 +552,7 @@
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
+    <timeline>timelines\timeline1</timeline>
   </timelines>
   <rooms name="rooms">
     <rooms name="Menu">
@@ -721,7 +726,19 @@
       <room>rooms\stage_selectCustom</room>
     </rooms>
   </rooms>
-  <constants number="38">
+  <constants number="50">
+    <constant name="WORLDSCALE">1</constant>
+    <constant name="WINROOM">newstage0</constant>
+    <constant name="GRAPHICHIGHEST">4</constant>
+    <constant name="GRAPHICHIGH">3</constant>
+    <constant name="GRAPHICMID">2</constant>
+    <constant name="GRAPHICLOW">1</constant>
+    <constant name="GRAPHICLOWEST">0</constant>
+    <constant name="STRLOWEST">"Lowest"</constant>
+    <constant name="STRLOW">"Low"</constant>
+    <constant name="STRMEDIUM">"Medium"</constant>
+    <constant name="STRHIGH">"High"</constant>
+    <constant name="STRHIGHEST">"Highest"</constant>
     <constant name="STRDEBUGGIN">"Debugging"</constant>
     <constant name="SEC">30</constant>
     <constant name="STRPLATFORM">"Platform"</constant>

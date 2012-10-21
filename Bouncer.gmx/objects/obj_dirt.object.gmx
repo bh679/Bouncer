@@ -37,7 +37,7 @@ ran1 =  floor(random(3))
 ran2 =  floor(random(5))
 weedsize = random(12)/10
 weedindex = floor(random(5))
-image_index = floor(random(5)+5)
+image_index = floor(random(5))
 if image_index = 5
     image_index = 0
 
@@ -191,19 +191,7 @@ optimise -= 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//cheating tiling
-/*var tmpx, tmpy;
-tmpx = 0
-repeat(image_xscale)
-{
-    tmpy = 0
-    repeat(image_yscale)
-    {
-        draw_sprite_ext(spr_dirt,indexArray[((sin(tmpx+tmpy)*10)+image_index) mod 5],x+tmpx,y+tmpy,1,1,image_alpha,image_blend,image_alpha)
-        tmpy += 16
-    }
-    tmpx += 16
-}   */
+            <string>
 
 draw_sprite_tiled_custom(spr_dirt,image_index,x,y,image_xscale,image_yscale,0,noone,1,true)
 i = 0
@@ -211,7 +199,7 @@ if check = true
 {
     if global.debuggin draw_text(x,y,string(grassno))
     
-    if global.platform != iOS
+    if global.detail &gt;= GRAPHICMID
     {
         //stretched grass
         repeat(grassno+1)
@@ -221,7 +209,7 @@ if check = true
         }
     }
 }
-if global.detail = 'high' and check = true and !(global.platform = iOS or global.platform = HTML5)
+if global.detail &gt;= GRAPHICHIGH and check = true// and !(global.platform = iOS or global.platform = HTML5)
 {
     if left = false 
       draw_sprite(spr_wood,1,x,y)

@@ -18,31 +18,33 @@ do
 
 update_last_tip(tipno)
 
+draw_set_font(fontTipSmall)
+line = 0
 //get string from tip array
 curr_tip = global.tip[tipno]
 //add space to start of string
 curr_tip = string_insert(" ",curr_tip,lastspace)
-
+i = 1
 //Add new line characters to string
 //repeat for size of string
 repeat(string_length(curr_tip))
 {
     //get character at i
     char = string_char_at(curr_tip,i)
+    lastline = line;
     //char is added to the current line
     line = string(line) + string(char)
-    
     //if the char is a space
     if char = ' '
     {
         //record space spoition
         lastspace = i
-        //record width of line so far
-        linewidth = max(min(15*16,string_width(line)),linewidth)
+        //record width of biggest line so far
+        linewidth = max(min(15*16,string_width(line)),linewidth)//max of 15*16. min of last width
     }
     
     //if line is too big
-    if string_width(line) > max(15*16,linewidth)
+    if string_width(line) > 15*16 or string_length(line) > 25//max(15*16,linewidth)
     {
         //check if this line has a space
         if lastspace = -1
@@ -68,7 +70,29 @@ repeat(string_length(curr_tip))
     //next character
     i += 1
 }
-
+ //if line is too big
+if string_width(line) > 15*16 or string_length(line) > 26//max(15*16,linewidth)
+{
+    //check if this line has a space
+    if lastspace = -1
+        //increase max size of line's for string
+        linewidth = max(string_width(line),linewidth)
+    else
+    {
+        //delete the space
+        string_delete(curr_tip,lastspace,1)
+        //instert the new line character at end of last word
+        curr_tip = string_insert("#",curr_tip,lastspace)
+        //increase number of lines
+        lines += 1
+        //start next line from newline character
+        i = lastspace+1
+        //null the next line
+        line = 0
+        //no spaces have been found this line
+        lastspace = -1
+    }
+} 
 //check if lastline is bigger than any other lines.
-linewidth = max(min(15*16,string_width(line)),linewidth)
+linewidth = max(min(15*16,string_width(line)),string_width(lastline),linewidth)
 

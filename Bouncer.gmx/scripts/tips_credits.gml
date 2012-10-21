@@ -28,7 +28,8 @@ global.tips += 1
 global.tip[global.tips] = "Spelling corrections had been made by: Ben Smith"
 global.tips += 1
 
-
+global.tip[global.tips] = "Sash Ristov is resposible for " + string(global.SashesTips) + " of these tips";
+global.tips += 1
 
 /*
 

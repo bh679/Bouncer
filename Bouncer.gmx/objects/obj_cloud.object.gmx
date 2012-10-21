@@ -70,7 +70,7 @@ skycolour = make_color_rgb(global.stage*40,global.stage*40,global.stage*40)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if  !(global.platform = iOS)
+            <string>if global.detail = GRAPHICHIGHEST// !(global.platform = iOS)
 {
     if x &lt; -70 and random(300) &lt;= 2
     {
@@ -95,11 +95,11 @@ skycolour = make_color_rgb(global.stage*40,global.stage*40,global.stage*40)
     }
     
     i = 0
-    repeat(size)
+    /*repeat(size)
     {
         Cx[i] += (hspeed + Cspeed[i])
         i += 1
-    }
+    }*/
 }
 /*switch(global.stage)
 {
@@ -133,7 +133,7 @@ skycolour = make_color_rgb(global.stage*40,global.stage*40,global.stage*40)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if  !(global.platform = iOS)
+            <string>if global.detail = GRAPHICHIGHEST//!(global.platform = iOS)
 {
     i = 0
     repeat(size)

@@ -985,7 +985,7 @@ setPlatform()
     
 draw_rectangle_color(0,0,room_width,room_height,topskycolour,topskycolour,skycolour,skycolour,false)//_color
 
-if !(global.platform = iOS or global.platform = HTML5)
+if global.detail &gt;= GRAPHICHIGH//!(global.platform = iOS or global.platform = HTML5)
 {
     //LevelsInStage[0] = 0
     SunMinDis = SunDis[0]
@@ -1032,7 +1032,7 @@ if trees[stage] != noone
 draw_background(trees[stage],0,0)
 
 //draw leaves
-if global.detail = 'high' and (trees[stage] = bg_trees1 or  trees[stage] = bg_trees2 
+if global.detail = GRAPHICHIGHEST and (trees[stage] = bg_trees1 or  trees[stage] = bg_trees2 
 or trees[stage] = bg_trees3 or  trees[stage] = bg_trees4
 or trees[stage] = bg_trees5 or  trees[stage] = bg_trees6)
 {

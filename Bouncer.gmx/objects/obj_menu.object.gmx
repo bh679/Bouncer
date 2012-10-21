@@ -48,8 +48,12 @@ hidden = false
 
 selected = 0
 
-menuItemHeight = 40;
-menuGap = 20;
+menuItemHeightDefualt = 40;
+menuItemHeightiOS = menuItemHeightDefualt;
+menuItemHeight = menuItemHeightDefualt;
+menuGapDefault = 20
+menuGapiOS = menuGapDefault + 20
+menuGap = menuGapDefault;
 
 menuItemY[0] = room_height/2 - (menuGap*2.5 + 3*menuItemHeight)
 menuItemY[1] = room_height/2 - (menuGap*1.5 + 2*menuItemHeight)
@@ -138,7 +142,58 @@ UPKEY1 = vk_up; UPKEY2 = ord('W'); UPKEY3 = vk_left; UPKEY4 = ord('A');
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if global.platform = iOS
+{
+    if menuGap != menuGapiOS
+    {
+        menuGap = menuGapiOS
+        menuItemHeight = menuItemHeightiOS
+             
+        menuItemY[0] = room_height/2 - (menuGap*2.5 + 3*menuItemHeight)
+        menuItemY[1] = room_height/2 - (menuGap*1.5 + 2*menuItemHeight)
+        menuItemY[2] = room_height/2 - (menuGap*0.5 + 1*menuItemHeight)
+        menuItemY[3] = room_height/2 + (menuGap*0.5 + 0*menuItemHeight)
+        menuItemY[4] = room_height/2 + (menuGap*1.5 + 1*menuItemHeight)
+        menuItemY[5] = room_height/2 + (menuGap*2.5 + 2*menuItemHeight)
+    }
+}
+else
+{
+
+    if menuGap = menuGapiOS
+    {
+        menuGap = menuGapDefault
+        menuItemHeight = menuItemHeightDefualt
+             
+        menuItemY[0] = room_height/2 - (menuGap*2.5 + 3*menuItemHeight)
+        menuItemY[1] = room_height/2 - (menuGap*1.5 + 2*menuItemHeight)
+        menuItemY[2] = room_height/2 - (menuGap*0.5 + 1*menuItemHeight)
+        menuItemY[3] = room_height/2 + (menuGap*0.5 + 0*menuItemHeight)
+        menuItemY[4] = room_height/2 + (menuGap*1.5 + 1*menuItemHeight)
+        menuItemY[5] = room_height/2 + (menuGap*2.5 + 2*menuItemHeight)
+    }
+}
+
+if global.debuggin = true
+{
+     if keyboard_check(ord('G'))
+     {
+        if mouse_wheel_up()
+            menuGapiOS+=1
+        
+        if mouse_wheel_down()
+            menuGapiOS-=1
+    }     
+    else if keyboard_check(ord('H'))
+     {
+        if mouse_wheel_up()
+            menuItemHeightiOS+=1
+        
+        if mouse_wheel_down()
+            menuItemHeightiOS-=1
+    }       
+}
+
 
 //change selected
 if keyboard_check_pressed(UPKEY1) or keyboard_check_pressed(UPKEY2) or keyboard_check_pressed(UPKEY3) or keyboard_check_pressed(UPKEY4)
@@ -347,6 +402,13 @@ else //not hidden
         //mouse is over
         if MouseInBox(room_width/2-width,menuItemY[_i]-menuGap/2,room_width/2+width,menuItemY[_i]+menuItemHeight+menuGap/2)
         {
+            if global.debuggin = true
+            {
+                draw_set_color(c_red)
+                draw_set_alpha(0.2)
+                draw_rectangle(room_width/2-width,menuItemY[_i]-menuGap/2,room_width/2+width,menuItemY[_i]+menuItemHeight+menuGap/2,false)
+                draw_set_alpha(1)
+            }
             //mouse moved
             if mouse_lastx != mouse_x and mouse_lasty != mouse_y 
                //highlight 
@@ -386,6 +448,12 @@ else //not hidden
 }
 mouse_lastx = mouse_x
 mouse_lasty = mouse_y
+
+//debugging
+if global.debuggin
+{
+    draw_text(16,room_height-64,"MenuHeight: " + string(menuItemHeight) + "  MenuGap: " + string(menuGap))
+}
 
 draw_set_font(Tahoma_R_14);
 draw_set_halign(fa_left);  

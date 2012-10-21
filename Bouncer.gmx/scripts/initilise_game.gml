@@ -1,9 +1,11 @@
 
+global.release = false
+global.detail = 0
 setPlatform()
 set_tips()
 set_game_value()
+scale_the_universe()
 global.soundOn = true
-global.detail = 'high'
 global.doubleclicktime = 10
 global.level = 0
 global.total_levels = 0
@@ -28,6 +30,4 @@ if global.platform = html5
 
 if !directory_exists(working_directory+"\Levels")
             directory_create(working_directory+"\Levels")
-            
-if global.platform = iOS or global.platform = HTML5
-   global.detail = 'low'
+

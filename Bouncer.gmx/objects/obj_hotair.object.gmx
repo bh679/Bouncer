@@ -29,19 +29,47 @@
 //y = 0
 i = 0
 height = 0//GetAirHeight()
-if global.platform = iOS or global.platform = HTML5
+if global.detail &gt;= GRAPHICHIGH
 {
-    repeat((yy - height)/32)
+   detailfactor = 16
+   
+    /*repeat((yy - height)/detailfactor)
     {
         ran1[i] = random(10)
         ran2[i] = random(10)
-        Ay[i] = (yy-i*32) +ran1[i]/10*16-8
+        Ay[i] = (yy-i*detailfactor) +ran1[i]/10*16-8//(detailfactor*(24/16)-16))
+        Ax[i] = x+ran2[i]/10*16-8
+        Asize[i] = random(10)/10
+        i += 1
+    }*/
+}
+else if global.detail &gt;= GRAPHICLOW
+{
+   detailfactor = 32
+//if global.platform = iOS or global.platform = HTML5
+    /*repeat((yy - height)/detailfactor)
+    {
+        ran1[i] = random(10)
+        ran2[i] = random(10)
+        Ay[i] = (yy-i*32) +ran1[i]/10*16-8//(detailfactor*(24/16)-16))
+        Ax[i] = x+ran2[i]/10*16-8
+        Asize[i] = random(10)/10
+        i += 1
+    }/*/
+}
+else
+   detailfactor = 24
+
+repeat((yy - height)/detailfactor)
+    {
+        ran1[i] = random(10)
+        ran2[i] = random(10)
+        Ay[i] = (yy-i*detailfactor) +ran1[i]/10*16-8//(detailfactor*(24/16)-16))
         Ax[i] = x+ran2[i]/10*16-8
         Asize[i] = random(10)/10
         i += 1
     }
-}
-else
+/*else
 {
     repeat((yy - height)*2/16)
     {
@@ -52,7 +80,7 @@ else
         Asize[i] = random(10)/10
         i += 1
     }
-}
+}*/
 //image_yscale = (room_height)/16
 </string>
           </argument>
@@ -78,9 +106,9 @@ else
             <kind>1</kind>
             <string>i = 0
 
-if global.platform = iOS or global.platform = HTML5
-{
-    repeat((yy - height)/32)
+ //if global.platform = iOS or global.platform = HTML5
+//{
+    repeat((yy - height)/detailfactor)
     {
         Ax[i] = x+sin(Ay[i]/(Asize[i]+20))*ran1[i]
         Ay[i] -= 1;
@@ -94,7 +122,7 @@ if global.platform = iOS or global.platform = HTML5
         draw_sprite_ext(spr_hotair,0,Ax[i],Ay[i],Asize[i],Asize[i],0,noone,1)
         i += 1
     }
-}else
+/*}else
 {
     repeat((yy - height)*2/16)
     {
@@ -110,7 +138,7 @@ if global.platform = iOS or global.platform = HTML5
         draw_sprite_ext(spr_hotair,0,Ax[i],Ay[i],Asize[i],Asize[i],0,noone,1)
         i += 1
     }
-}
+}*/
 //    draw_sprite_ext(sprite_index,0,x,y,image_xscale,image_yscale,0,noone,1)
 </string>
           </argument>

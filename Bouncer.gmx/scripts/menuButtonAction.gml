@@ -18,10 +18,12 @@ if tmpMenuItem = STROPTIONS
 {
     obj_menu.menuItem[0] = STRVIDEO
     obj_menu.menuItem[1] = STRAUDIO
-    obj_menu.menuItem[2] = STRPLATFORM
     obj_menu.menuItem[3] = STRUPDATE
-    obj_menu.menuItem[4] = STRDEBUGGIN
-    obj_menu.menuItem[5] = STRMENU
+    obj_menu.menuItem[4] = STRMENU
+    if global.release
+       obj_menu.menuItem[5] = ''
+    else
+        obj_menu.menuItem[5] = STRDEBUGGIN
 } else
 
 //options menu
@@ -56,7 +58,10 @@ if tmpMenuItem = STRMENU
     obj_menu.menuItem[1] = STRPLAY
     obj_menu.menuItem[2] = STRSTAGES
     obj_menu.menuItem[3] = STROPTIONS
-    obj_menu.menuItem[4] = STREXIT
+    if global.platform != iOS and global.platform != html5
+       obj_menu.menuItem[4] = STREXIT
+    else
+       obj_menu.menuItem[4] = ''
     obj_menu.menuItem[5] = ''
 } else
 
@@ -77,15 +82,18 @@ if tmpMenuItem = STRVIDEO
     obj_menu.menuItem[0] = ''
     obj_menu.menuItem[1] = STRGRAPHICS
     obj_menu.menuItem[2] = STRFULLSCREEN
-    obj_menu.menuItem[3] = STRPLATFORM
-    obj_menu.menuItem[4] = STRMENU
+    obj_menu.menuItem[3] = STRMENU
+    if global.release
+       obj_menu.menuItem[4] = ''
+    else
+        obj_menu.menuItem[4] = STRPLATFORM
     obj_menu.menuItem[5] = ''
 } else
 
 //platform
 if tmpMenuItem = STRPLATFORM
 {
-    obj_menu.menuItem[0] = ''
+    obj_menu.menuItem[0] = Html5
     obj_menu.menuItem[1] = Windows
     obj_menu.menuItem[2] = Mac
     obj_menu.menuItem[3] = iOS
@@ -117,13 +125,48 @@ if tmpMenuItem = STRDEBUGGIN
 //set graphics details
 if tmpMenuItem = STRGRAPHICS
 {
-    changeGraphics()
+    obj_menu.menuItem[0] = ''//STRLOWEST
+    obj_menu.menuItem[1] = STRLOWEST//STRLOW
+    obj_menu.menuItem[2] = STRMEDIUM//STRMEDIUM
+    obj_menu.menuItem[3] = STRHIGHEST//STRHIGH
+    obj_menu.menuItem[4] = STRMENU//STRHIGHEST
+    obj_menu.menuItem[5] = ''//STRMENU
 } else
 
 //fullscreen
 if tmpMenuItem = STRFULLSCREEN
 {
     window_set_fullscreen((window_get_fullscreen()+1) mod 2)
+} else
+
+//Graphics lowest
+if tmpMenuItem = STRLOWEST
+{
+    changeGraphics(GRAPHICLOWEST)
+} else
+
+//Graphics low
+if tmpMenuItem = STRLOW
+{
+    changeGraphics(GRAPHICLOW)
+} else
+
+//Graphics mid
+if tmpMenuItem = STRMEDIUM
+{
+    changeGraphics(GRAPHICMID)
+} else
+
+//Graphics high
+if tmpMenuItem = STRHIGH
+{
+    changeGraphics(GRAPHICHIGH)
+} else
+
+//Graphics highest
+if tmpMenuItem = STRHIGHEST
+{
+    changeGraphics(GRAPHICHIGHEST)
 } else
 
 
@@ -148,6 +191,12 @@ if tmpMenuItem = Windows
 if tmpMenuItem = Mac
 {
     global.platform = Mac
+} else
+
+//Mac
+if tmpMenuItem = Html5
+{
+    global.platform = html5
 } else
 
 

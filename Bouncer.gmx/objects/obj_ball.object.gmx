@@ -802,7 +802,7 @@ continuousCounter += 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if shot = true and global.detail = 'high'
+            <string>if shot = true and global.detail &gt;= GRAPHICHIGH
 {
     //create dead ball
     dead = instance_create(x,y,obj_deadball)

@@ -2,6 +2,9 @@ var object;
 
 object = argument0
 
+//if x - object.x > object.image_xscale 
+//   instance_destroy()
+
 var tmpBlock;
 if place_meeting(x+BLOCKSIZE*image_xscale,y,object) = true //check right
 {
@@ -41,4 +44,6 @@ if place_meeting(x,y+BLOCKSIZE*image_yscale,object) = true //check down
     }
     until(tmpBlock = -1 or position_meeting(x,y+BLOCKSIZE*image_yscale,object) = false)
 }
+
+
 

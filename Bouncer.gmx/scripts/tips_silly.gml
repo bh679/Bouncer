@@ -22,7 +22,7 @@ global.tips += 1
 global.tip[global.tips] = "This global.tip was made 20/02/2012"
 global.tips += 1
 
-global.tip[global.tips] = "Bet you were hoping this global.tip was either going to be funny, or interesting. Unlucky."
+global.tip[global.tips] = "Bet you were hoping this tip was either going to be funny, or interesting. Unlucky."
 global.tips += 1
 
 global.tip[global.tips] = "It wasnt an apple that hit Newton. Bouncer."

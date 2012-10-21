@@ -13,7 +13,15 @@ if instance_number(obj_new_level) = 1 and !keyboard_check(vk_enter)
 }
 else
 {
-    room = room_next(room)  
-    Levels.roomindex += 1  
+    if Levels.roomindex+1 >= global.total_levels
+    {
+        Levels.roomindex += 1
+       room = room_next(room)  
+    }
+    else
+    {
+        room = WINROOM  
+        Levels.roomindex = 0
+    }
     //room = room_goto(Levels.level[Levels.roomindex])
 }

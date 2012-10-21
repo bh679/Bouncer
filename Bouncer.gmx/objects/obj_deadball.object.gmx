@@ -150,6 +150,16 @@ image_xscale -= 0.001
 image_yscale -= 0.001
 if voice_volume &gt; 0.6
 voice_volume -= 0.001
+
+if global.detail &lt; GRAPHICHIGHEST
+{
+   alarm[4] = 2
+   balls = instance_number(obj_deadball)
+   image_alpha -= 0.00005*balls
+    image_xscale -= 0.0005*balls
+    image_yscale -= 0.0005*balls
+}
+
 </string>
           </argument>
         </arguments>
@@ -270,7 +280,7 @@ alarm[2] = 3
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.detail != 'high'
+            <string>if global.detail &lt;= GRAPHICHIGH
     instance_destroy()
 
 //test if about to bounce
